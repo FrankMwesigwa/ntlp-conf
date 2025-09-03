@@ -31,7 +31,10 @@ const Header = () => {
                     </ul>
                     <div className="d-flex ms-3">
                         <a href="#contact" className="btn btn-outline-primary btn-sm me-2">Submit Abstract</a>
-                        <Link to="/registration" className="btn btn-primary-custom btn-sm">Register Now</Link>
+                        <Link to="/registration" className="btn btn-primary-custom btn-sm me-2">Register Now</Link>
+                        <Link to="/admin" className="btn btn-outline-secondary btn-sm">
+                            <i className="fas fa-cogs"></i> Admin
+                        </Link>
                     </div>
                 </div>
             </div>
