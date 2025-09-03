@@ -1,28 +1,37 @@
 import React from 'react'
 import logo from './logo.png';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
+    const location = useLocation();
+
+    const isActive = (path) => {
+        return location.pathname === path;
+    };
+
     return (
-        <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-            <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="#home">
-                    <img src={logo} width={50} alt="Uganda Coat of Arms" class="uganda-logo"/>
+        <nav className="navbar navbar-expand-lg navbar-custom fixed-top">
+            <div className="container">
+                <a className="navbar-brand d-flex align-items-center" href="#home">
+                    <img src={logo} width={50} alt="Uganda Coat of Arms" className="uganda-logo" />
                     NACNDC & JASH 2025
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#speakers">Speakers</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#agenda">Agenda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav ms-auto">
+                        <li className="nav-item">
+                            <Link className={`nav-link ${isActive('/') ? 'active' : ''}`} to="/">Home</Link>
+                        </li>
+                        <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#speakers">Speakers</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#agenda">Agenda</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
                     </ul>
-                    <div class="d-flex ms-3">
-                        <a href="#contact" class="btn btn-outline-primary btn-sm me-2">Submit Abstract</a>
-                        <a href="#contact" class="btn btn-primary-custom btn-sm">Register Now</a>
+                    <div className="d-flex ms-3">
+                        <a href="#contact" className="btn btn-outline-primary btn-sm me-2">Submit Abstract</a>
+                        <Link to="/registration" className="btn btn-primary-custom btn-sm">Register Now</Link>
                     </div>
                 </div>
             </div>
