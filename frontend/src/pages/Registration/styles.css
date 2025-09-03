@@ -126,6 +126,62 @@
      margin-top: 0.75rem;
  }
 
+ .selected-fee-info {
+     margin-top: 1rem;
+ }
+
+ .selected-fee-info .alert {
+     border-radius: 8px;
+     border: none;
+     font-weight: 500;
+ }
+
+ .is-invalid {
+     border-color: #dc3545 !important;
+ }
+
+ .invalid-feedback {
+     display: block;
+     width: 100%;
+     margin-top: 0.25rem;
+     font-size: 0.875rem;
+     color: #dc3545;
+ }
+
+ .alert {
+     border-radius: 8px;
+     border: none;
+     font-weight: 500;
+ }
+
+ .alert-danger {
+     background-color: #f8d7da;
+     color: #721c24;
+ }
+
+ .alert-info {
+     background-color: #d1ecf1;
+     color: #0c5460;
+ }
+
+ .spinner-border-sm {
+     width: 1rem;
+     height: 1rem;
+ }
+
+ .btn-primary-custom:disabled {
+     background: #6c757d;
+     cursor: not-allowed;
+     transform: none;
+     box-shadow: none;
+ }
+
+ .btn-primary-custom:disabled:hover {
+     background: #6c757d;
+     transform: none;
+     box-shadow: none;
+ }
+
  .uganda-logo {
      width: 40px;
      height: 40px;

@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import { connectDB } from './config/db.js';
 import userRoutes from './routes/users.js';
 import activityRoutes from './routes/activities.js';
+import registrationRoutes from './routes/registrations.js';
 
 dotenv.config();
 const app = express();
@@ -14,6 +15,7 @@ app.use(express.json());
 
 app.use('/api/users', userRoutes);
 app.use('/api/activities', activityRoutes);
+app.use('/api/registrations', registrationRoutes);
 
 const PORT = process.env.PORT || 5000;
 
